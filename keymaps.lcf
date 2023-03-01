@@ -1,0 +1,66 @@
+# $xx: a means alias
+# {a & b} means a and b
+# {a | b} means a or  b (indecisive lol)
+# {a + b} means ab
+
+# {{a & b} } + c} means that ac and bc do the same
+# {{a | b} } + c} means that ac will be they key
+# if there isn't any other time where that key exists
+# then it will be bc
+# it also raises a warning
+# \+ => + \& => &
+
+# this section should only be used to make aliases
+-- [[section: global]] --
+$left : h & left_key
+$up   : j & up_key
+$down : k & down_key
+$right: l & right_key
+
+-- [[section: wm]] --
+$mod_key: alt | home
+	-- [[section: workspace]] --
+	switch_to_ws_1 = $mod_key + 1
+	switch_to_ws_2 = $mod_key + 2
+	switch_to_ws_3 = $mod_key + 3
+	switch_to_ws_4 = $mod_key + 4
+	switch_to_ws_5 = $mod_key + 5
+	switch_to_ws_6 = $mod_key + 6
+	switch_to_ws_7 = $mod_key + 7
+	switch_to_ws_8 = $mod_key + 8
+	switch_to_ws_9 = $mod_key + 9
+	switch_to_ws_0 = $mod_key + 0
+
+	mov_win_to_ws_1 = $mod_key + shift + 1
+	mov_win_to_ws_2 = $mod_key + shift + 2
+	mov_win_to_ws_3 = $mod_key + shift + 3
+	mov_win_to_ws_4 = $mod_key + shift + 4
+	mov_win_to_ws_5 = $mod_key + shift + 5
+	mov_win_to_ws_6 = $mod_key + shift + 6
+	mov_win_to_ws_7 = $mod_key + shift + 7
+	mov_win_to_ws_8 = $mod_key + shift + 8
+	mov_win_to_ws_9 = $mod_key + shift + 9
+	mov_win_to_ws_0 = $mod_key + shift + 0
+	--end--
+--end--
+
+-- [[section: ed]] --
+$leader = space
+	-- [[section: window]] --
+	switch_to_left  = ctrl + $left
+	switch_to_up    = ctrl + $up
+	switch_to_down  = ctrl + $down
+	switch_to_right = ctrl + $right
+	--end--
+	-- [[section: tabs  ]] --
+	--end--
+	-- [[section: buffer]] --
+	switch_to_left  = shift + $left
+	switch_to_right = shift + $right
+	--end--
+	-- [[section: tree ]] --
+	toggle = $leader + e
+	--end--
+	-- [[section: lsp   ]] --
+	--end--
+--end--
